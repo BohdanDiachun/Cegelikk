@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Рівняння в часткових похідних</title>
+    <style type="text/css">
+        ul li {margin: 20px; margin-left: 3px;}
+        li ul li { margin: 6px;}
+        a:link {color:#8A0000;}      /* unvisited link */
+        a:visited { color:#454545;}
+
+
+	.button {
+		display: inline-block;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		font: 14px/100% Arial, Helvetica, sans-serif;
+		padding: .5em 2em .55em;
+		text-shadow: 0 1px 1px rgba(0,0,0,.3);
+		-webkit-border-radius: .5em; 
+		-moz-border-radius: .5em;
+		border-radius: .5em;
+		-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+		-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+		box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	}
+	.button:hover {
+		text-decoration: none;
+	}
+	.button:active {
+		position: relative;
+		top: 1px;
+	}
+	
+
+	/* color styles 
+	---------------------------------------------- */
+	/* orange */
+	.orange {
+		color: #fef4e9;
+		border: solid 1px #da7c0c;
+		background: #f78d1d;
+		background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+		background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+		filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+	}
+	.orange:hover {
+		background: #f47c20;
+		background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+		background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+		filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+	}
+	.orange:active {
+		color: #fcd3a5;
+		background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+		background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+		filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+	}
+
+	#customers{
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		width:100%;
+		border-collapse:collapse;
+	}
+	#customers td, #customers th {
+		font-size:1em;
+		border:1px solid #98bf21;
+		padding:3px 7px 2px 7px;
+	}
+	#customers th {
+		font-size:1.1em;
+		text-align:left;
+		padding-top:5px;
+		padding-bottom:4px;
+		background-color:#A7C942;
+		color:#ffffff;
+	}
+	#customers tr.alt td {
+		color:#000000;
+		background-color:#EAF2D3;
+	}
+
+    </style>
+</head>
+<body>
+
+	<table id="customers">
+		<tr>
+		  <th>Питання</th>
+		  <th>Ссилки</th>
+		</tr>
+		
+		<tr class="alt">
+			<td>2.	Ознака зібжності методу ітерацій.</td>
+			<td><a href = "1.png" class="button orange">Click</a></td>
+		</tr>
+
+		<tr>
+			<td>3.	Ознака існування кореня.</td>
+			<td><a href = "2.png" class="button orange">Click</a></td>
+		</tr>
+
+		<tr class="alt">
+			<td>4.	Поняття порядку ітераційного процесу. </td>
+			<td><a href = "3.png" class="button orange">Click</a></td>
+		</tr>
+
+		<tr>
+			<td>5.	геометрична інтерпретація методу ітерацій.</td>
+			<td><a href = "4.png" class="button orange">Click</a></td>
+		</tr>
+
+		<tr class="alt">
+			<td>6.	Метод хорд і дотичних.	</td>
+			<td>
+				<a href = "5.png" class="button orange">1 of 2</a> <br>
+				<a href = "5(1).png" class="button orange">2 of 2</a>				
+			</td>
+		</tr>
+
+		<tr>
+			<td>7.	Метод простої ітерації в нелінійних системах рівнянь.</td>
+			<td>
+				<a href = "6.png" class="button orange">1 of 2</a> <br>
+				<a href = "6(1).png" class="button orange">2 of 2</a>				
+			</td>
+		</tr>
+
+		<tr class="alt">
+			<td>8.	Метод Ньютона розв. системи нелінійних рівнянь.</td>
+			<td>
+				<a href = "7.png" class="button orange">1 of 2</a> <br>
+				<a href = "7(1).png" class="button orange">2 of 2</a>				
+			</td>
+		</tr>
+
+		<tr>
+			<td>9.	Модифікований метод Ньютона.</td>
+			<td><a href = "8.png" class="button orange">Click</a></td>
+		</tr>
+
+		<tr class="alt">
+			<td>10.	Ідея градієнтних методів     (немає). 
+			</td>
+			<td><a href = "9.png" class="button orange">Click</a></td>
+		</tr>
+
+		<tr>
+			<td>11.	Постановка задачі інтерполювання. 		</td>
+			<td><a href = "11.png" class="button orange">Click</a></td>
+		</tr>
+
+		<tr class="alt">
+			<td>12.	ПОняття оптимального інтерполяційного многочлена. (немає) 
+
+
+			</td>
+			<td>
+				<a href = "12.png" class="button orange">Click</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td>13.	Поняття системи функцій чебишева.</td>
+			<td><a href = "13.png" class="button orange">Click</a></td>
+		</tr>
+
+		<tr class="alt">
+			<td>14.	Критерій єдиності розвязку задачі інтерполювання.  	</td>
+			<td><a href = "14.png" class="button orange">Click</a></td>
+		</tr>
+
+		<tr>
+			<td>15.	Ознака за якою система фун. є системою Чебишева.   	  
+
+
+			</td>
+			<td>
+				<a href = "15.png" class="button orange">Click</a> 
+			
+			</td>
+		</tr>
+
+		<tr class="alt">
+			<td>16.	Інтерполяційний член Лагранжа та його залишковий член.	</td>
+			<td>
+				<a href = "16.png" class="button orange">1 of 2</a> <br>
+				<a href = "16(1).png" class="button orange">2 of 2</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td>17. Розділені різниці та їх властивості	</td>
+			<td>
+				<a href = "17.png" class="button orange">Click</a> 
+			</td>
+		</tr>
+
+		<tr class="alt">
+			<td>18.	Форми інтер. члена Ньютона для інтер. вперед і назад у випадку НЕРІВНОВІДДАЛЕНИХ вузлів 	</td>
+			<td>
+				<a href = "18.png" class="button orange">Click</a> 
+			</td>
+		</tr>
+
+		<tr>
+			<td>19. Скінчені різниці та їх властивості.	</td>
+			<td><a href = "19.png" class="button orange">Click</a></td>
+		</tr>
+
+		<tr class="alt">
+			<td>20.	Форми інтер. члена Ньютона для інтер. вперед і назад у випадку РІВНОВІДДАЛЕНИХ вузлів.	
+
+			</td>
+			<td>
+				<a href = "20.png" class="button orange">Click</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td>21.	Задача найкращого вибору вузлів інтерполювання.	</td>
+			<td><a href = "21.png" class="button orange">Click</a></td>
+		</tr>
+
+		<tr class="alt">
+			<td>22.	Інтерполювання періодичних функцій.	</td>
+			<td>
+				<a href = "22.png" class="button orange">1 of 2</a> <br>
+				<a href = "22(1).png" class="button orange">2 of 2</a>
+			</td>
+		</tr>
+
+		<tr >
+			<td>23.	Ідея інтерполювання функції однієї змінної за допомогою сплайна.	
+
+			</td>
+			<td>
+				<a href = "23.png" class="button orange">Click</a> 				
+			</td>
+		</tr>
+
+		<tr class="alt">
+			<td >24.	Поняття квадратурної формули.	</td>
+			<td><a href = "24.png" class="button orange">Click</a></td>
+		</tr>
+
+		<tr >
+			<td >25.	Загальна квадратурна формула інтерполяційного типу.	</td>
+			<td><a href = "25.png" class="button orange">Click</a></td>
+		</tr>
+
+		<tr class="alt">
+			<td >26.	Малі і великі формули прфмокутників і трапецій.	</td>
+			<td>
+				<a href = "26.png" class="button orange">1 of 4</a> <br>
+				<a href = "26(1).png" class="button orange">2 of 4</a> <br>
+				<a href = "26(2).png" class="button orange">3 of 4</a> <br>
+				<a href = "26(3).png" class="button orange">4 of 4</a>
+			</td>
+		</tr>
+
+		<tr >
+			<td >27.	Алгебраічна міра точності квадратурних формул.	</td>
+			<td><a href = "27.png" class="button orange">Click</a></td>
+		</tr>
+
+		<tr class="alt">
+			<td>28.	Квадратурні формули найвищої алгебраічної точності.</td>
+			<td>
+				<a href = "28.png" class="button orange">1 of 2</a> <br>
+				<a href = "28_gausa.png" class="button orange">2 of 2</a>
+			</td>
+		</tr>
+		<tr>
+			<td>29.	Чисельні методи розвязування задачі Коші для диф. р-ня. першого порядку.</td>
+			<td><a href = "29.png" class="button orange" >Click</a></td>
+		</tr>
+		<tr class="alt">
+			<td>30. Метод Ейлера, ознака збіжності.</td>
+			<td><a href = "30.png" class="button orange" >Click</a></td>
+		</tr>
+		<tr>
+			<td>31.	Ідея методу Роген-Кутта.</td>
+			<td><a href = "31.png" class="button orange" >Click</a></td>
+		</tr>
+		<tr class="alt">
+			<td>32.	Ідея екстраполяційного методу Адамса.</td>
+			<td><a href = "32.png" class="button orange" >Click</a></td>
+		</tr>
+
+
+</table>
+
+</body>
+</html>
